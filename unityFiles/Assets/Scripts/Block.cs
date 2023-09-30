@@ -14,7 +14,7 @@ public class Block : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movementPerFrame = Difficulty.instance.getDifficultySpeed(); //set speed block moves at
+        movementPerFrame = Difficulty.instance.getDifficultySpeed() * Time.deltaTime; //set speed block moves at
         moveAway = false;
         movement = maxMovement = 13f;
         if (xAxis)
